@@ -14,14 +14,14 @@ namespace Components
 
         public float Friction { get; set; }
 
-        public Physics(Vector2 velocity = default, Vector2 acceleration = default,
-            float mass = 1f, bool isAffectedByGravity = true, float friction = 0f)
+        public Physics(Vector2 _velocity = default, Vector2 _acceleration = default,
+            float _mass = 1f, bool _isAffectedByGravity = true, float _friction = 0f)
         {
-            Velocity = velocity;
-            Acceleration = acceleration;
-            Mass = mass;
-            IsAffectedByGravity = isAffectedByGravity;
-            Friction = friction;
+            Velocity = _velocity;
+            Acceleration = _acceleration;
+            Mass = _mass;
+            IsAffectedByGravity = _isAffectedByGravity;
+            Friction = _friction;
         }
 
     }

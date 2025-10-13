@@ -6,6 +6,8 @@ using Components;
 using Entities;
 using Systems;
 
+using static Systems.SpritesSystems;
+
 namespace GameEngine
 {
     public class Game : Microsoft.Xna.Framework.Game
@@ -14,10 +16,6 @@ namespace GameEngine
         private SpriteBatch _spriteBatch;
         private List<Entity> _entities = new List<Entity>();
 
-
-        // Gravité simple
-        private Sprite _sprite2;
-        private Sprite _sprite;
 
         public Game()
         {
@@ -37,58 +35,44 @@ namespace GameEngine
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // --- Créer le player ---
             var transform = new Transform(new Vector2(100, 100));
-            _sprite = TextureLoader.LoadSprite(Content,"player");
-            _sprite2 = TextureLoader.LoadSprite(Content,"player2");
+            Sprite sprite = LoadSprite(Content,"player");
+            sprite.LayerDepth = 1;
+            Physics physics = new Physics(Vector2.Zero, Vector2.Zero);
+            BoxCollider playerCollider = new BoxCollider(new Vector2(60, 60));
 
-
-
-            var physics = new Physics(Vector2.Zero, Vector2.Zero, 1f, false);
-
-            Entity player = new Entity(transform, _sprite, physics);
-
+            Entity player = new Entity(transform, sprite, physics,new Movements(),playerCollider);
             _entities.Add(player);
+
+            Entity ground = new Entity(
+                new Transform(new Vector2(50, 400),0,new Vector2(50,1)),
+                new BoxCollider(new Vector2(5000, 10)),
+                LoadSprite(Content,"ground"));
+            _entities.Add(ground);
+
         }
 
-        protected override void Update(GameTime gameTime)
+        protected override void Update(GameTime _gameTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            float delta = (float)_gameTime.ElapsedGameTime.TotalSeconds;
 
-            float delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            // --- Contrôles du player ---
-            var keyboard = Keyboard.GetState();
-
-            foreach (var entity in _entities)
-            {
-                float speed = 300f;
-
-                if (keyboard.IsKeyDown(Keys.Left)|| keyboard.IsKeyDown(Keys.Q))
-                    entity.Physics.Velocity = new Vector2(-speed, entity.Physics.Velocity.Y);
-                else if (keyboard.IsKeyDown(Keys.Right) || keyboard.IsKeyDown(Keys.D))
-                    entity.Physics.Velocity = new Vector2(speed, entity.Physics.Velocity.Y);
-                else
-                    entity.Physics.Velocity = new Vector2(0, entity.Physics.Velocity.Y);
-                if (Mouse.GetState().LeftButton == ButtonState.Pressed)
-                    entity.SetSprite(_sprite2);
-                else
-                    entity.SetSprite(_sprite);
-            }
-
-
-            // --- Mettre à jour la physique ---
             PhysicsSystem.Update(_entities, delta);
 
-            base.Update(gameTime);
+            foreach (Entity entity in _entities)
+            {
+                entity.UpdateBehaviors(delta);
+            }
+
+            base.Update(_gameTime);
         }
 
-        protected override void Draw(GameTime gameTime)
+        protected override void Draw(GameTime _gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            SpriteSystems.Draw(_spriteBatch,_entities);
-            base.Draw(gameTime);
+            SpritesSystems.Draw(_spriteBatch,_entities);
+            base.Draw(_gameTime);
         }
     }
 }

@@ -7,26 +7,29 @@ namespace Systems
 {
     public class PhysicsSystem
     {
-        private static Vector2 _gravity = new Vector2(0, 500f);
+        private static Vector2 _gravity = new Vector2(0, 100);
 
-        public static void Update(List<Entity> entities, float deltaTime)
+        public static void Update(List<Entity> _entities, float _deltaTime)
         {
-            foreach (var entity in entities)
+
+            foreach (var entity in _entities)
             {
-                var transform = entity.Transform;
-                var physics = entity.Physics;
+                var physics = entity.GetComponent<Physics>();
+                var transform = entity.GetComponent<Transform>();
+
+                if (physics == null || transform == null)
+                    continue;
 
                 if (physics.IsAffectedByGravity)
-                    physics.Acceleration += _gravity;
+                    physics.Velocity += _gravity * _deltaTime;
 
-                physics.Velocity += physics.Acceleration * deltaTime;
+                physics.Velocity *= 1f - physics.Friction * _deltaTime;
 
-                physics.Velocity *= (1f - physics.Friction * deltaTime);
-
-                transform.Position += physics.Velocity * deltaTime;
-
-                physics.Acceleration = Vector2.Zero;
+                transform.Position += physics.Velocity * _deltaTime;
             }
+            CollisionsSystem.CheckCollision(_entities);
+
         }
+
     }
 }

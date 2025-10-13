@@ -8,23 +8,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83e24aef-8780-439c-aa39-652027f7f073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Physics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Entity/Entity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Game.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/SpriteSystems.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/TextureLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/BoxCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/CircleCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Collider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/CollisionsSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/2dGameEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/2dGameEngine.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Physics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Physics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Entity/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/SpriteSystems.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/TextureLoader.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +43,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/43/1fbfd4e5/GraphicsDevice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/a4/ad8b55b8/SpriteBatch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/f0/819c501f/Game.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="340PEUXUbdNYPsJwDg7RKoD9S6X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,22 +61,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.2dGameEngine.executor": "Run",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.2dGameEngine.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="2dGameEngine" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -97,8 +105,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760347406119</updated>
-      <workItem from="1760347407188" duration="13065000" />
+      <workItem from="1760347407188" duration="17839000" />
+      <workItem from="1760374771081" duration="6000" />
     </task>
+    <task id="LOCAL-00001" summary="add base mecanics">
+      <option name="closed" value="true" />
+      <created>1760365276220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760365276220</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add all file">
+      <option name="closed" value="true" />
+      <created>1760365319652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760365319652</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +145,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="add base mecanics" />
+    <MESSAGE value="add all file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add all file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

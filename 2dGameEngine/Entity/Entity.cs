@@ -4,36 +4,45 @@ namespace Entities
 {
     public class Entity
     {
-        public List<Component> entityComponents = new List<Component>();
+        private List<Component> _entityComponents = new List<Component>();
 
-        public Transform? Transform { get; private set; }
-        public Sprite? Sprite { get; private set; }
-        public Physics? Physics { get; private set; }
-
-        public void SetSprite(Sprite newSprite)
+        public void AddBehavior(Component _component)
         {
-            Sprite = newSprite;
+            _component.entity = this;
+            _entityComponents.Add(_component);
+            _component.Start();
         }
 
-        public Entity(params Component[] components)
+        public void UpdateBehaviors(float _deltaTime)
         {
-            entityComponents.AddRange(components);
+            foreach (Component component in _entityComponents)
+                component.Update(_deltaTime);
+        }
 
-            foreach (var component in components)
+        public Entity(params Component[] _components)
+        {
+            _entityComponents.AddRange(_components);
+
+            foreach (var component in _components)
             {
-                Console.WriteLine(component.GetType());
-                switch (component)
-                {
-                    case Transform t:
-                        Transform = t;
-                        break;
-                    case Sprite s:
-                        Sprite = s;
-                        break;
-                    case Physics p:
-                        Physics = p;
-                        break;
-                }
+                component.entity = this;
+                component.Start();
+            }
+        }
+
+        public T? GetComponent<T>() where T : Component
+        {
+            foreach (var c in _entityComponents)
+                if (c is T matched)
+                    return matched;
+            return null;
+        }
+
+        public void OnCollision(Entity _other)
+        {
+            foreach (var component in _entityComponents)
+            {
+                component.OnCollision(_other);
             }
         }
     }

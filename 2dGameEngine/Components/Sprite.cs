@@ -15,16 +15,14 @@ namespace Components
 
             public Vector2 Origin { get; set; }
 
-            // Constructeur simple
-            // C#
-            public Sprite(Texture2D texture, Color? color = null, Rectangle? sourceRectangle = null,
-                float layerDepth = 0f, Vector2? origin = null)
+            public Sprite(Texture2D _texture, Color? _color = null, Rectangle? _sourceRectangle = null,
+                float _layerDepth = 0f, Vector2? _origin = null)
             {
-                Texture = texture;
-                Color = color ?? Color.White;
-                SourceRectangle = sourceRectangle;
-                LayerDepth = layerDepth;
-                Origin = origin ?? new Vector2(texture.Width / 2, texture.Height / 2);
+                Texture = _texture;
+                Color = _color ?? Color.White;
+                SourceRectangle = _sourceRectangle;
+                LayerDepth = _layerDepth;
+                Origin = _origin ?? new Vector2(_texture.Width / 2, _texture.Height / 2);
             }
     }
 }
