@@ -33,10 +33,10 @@ namespace GameEngine
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             var transform = new Transform(new Vector2(50, 0),0,new Vector2(64,64));
             AnimatedSprite sprite = LoadAnimatedSprite(Content,"playerAnim",2,2,128);
-            sprite.LayerDepth = 1;
+            sprite.layerDepth = 1;
             Physics physics = new Physics();
 
-            Entity player = new Entity(transform, sprite,new PlayerMovement(), physics,new BoxCollider(transform.Size));
+            Entity player = new Entity(transform, sprite,new PlayerMovement(), physics,new BoxCollider(transform.Size),new CameraComponent(_camera));
             EntitySystem.Add(player);
             _camera.Follow(player);
 
@@ -45,7 +45,7 @@ namespace GameEngine
                 transform1,
                 new BoxCollider(transform1.Size),
                 LoadSprite(Content,"ground"),
-                new Physics() { IsAffectedByGravity = false });
+                new Physics(_isAffectedByGravity:false));
             EntitySystem.Add(ground);
 
         }

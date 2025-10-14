@@ -21,7 +21,7 @@ namespace Systems
 
 
                 if (physics.IsAffectedByGravity)
-                    physics.Velocity += _gravity * _deltaTime;
+                    physics.Velocity += _gravity * _deltaTime * physics.Mass;
 
                 physics.Velocity *= 1f - physics.Friction * _deltaTime;
 

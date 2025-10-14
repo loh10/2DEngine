@@ -5,20 +5,21 @@ namespace Components
 {
     public class Sprite : Component
     {
-        public Texture2D Texture { get; set; }
-        public Color Color { get; set; }
-        public Rectangle? SourceRectangle { get; set; }
-        public float LayerDepth { get; set; }
+        public Texture2D texture;
+        public Color color;
+        public Rectangle? sourceRectangle;
+        public float layerDepth;
+        public SpriteEffects effects;
 
         public Vector2 Scale { get; private set; } = Vector2.One;
 
         public Sprite(Texture2D _texture, Color? _color = null, Rectangle? _sourceRectangle = null,
-            float _layerDepth = 0f)
+            float _layerDepth = 0f, SpriteEffects _effects = SpriteEffects.None)
         {
-            Texture = _texture;
-            Color = _color ?? Color.White;
-            SourceRectangle = _sourceRectangle;
-            LayerDepth = _layerDepth;
+            texture = _texture;
+            color = _color ?? Color.White;
+            sourceRectangle = _sourceRectangle;
+            layerDepth = _layerDepth;
         }
     }
 }

@@ -13,8 +13,8 @@ public class AnimatedSprite : Sprite
     private int _frameHeight;
     public int FrameWidth { get; private set; }
 
-    public AnimatedSprite(Texture2D _texture,int _frameCount,float _timeFrame,int _frameWidth,int _frameHeight = 0, Color? _color = null, Rectangle? _sourceRectangle = null, float _layerDepth = 0) :
-        base(_texture, _color, _sourceRectangle, _layerDepth)
+    public AnimatedSprite(Texture2D _texture,int _frameCount,float _timeFrame,int _frameWidth,int _frameHeight = 0, Color? _color = null, Rectangle? _sourceRectangle = null, float _layerDepth = 0,SpriteEffects _effects = SpriteEffects.None) :
+        base(_texture, _color, _sourceRectangle, _layerDepth,_effects)
     {
         frameCount = _frameCount;
         currentFrame = 0;
@@ -35,7 +35,7 @@ public class AnimatedSprite : Sprite
                 currentFrame = 0;
             _currentTime = 0;
         }
-        SourceRectangle = new Rectangle(currentFrame * _frameWidth, 0, _frameWidth, _frameHeight);
+        sourceRectangle = new Rectangle(currentFrame * _frameWidth, 0, _frameWidth, _frameHeight);
         base.Update(_deltaTime);
     }
 

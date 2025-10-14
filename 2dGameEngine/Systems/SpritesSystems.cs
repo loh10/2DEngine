@@ -33,22 +33,22 @@ namespace Systems
                 if (t == null || s == null)
                     continue;
 
-                int frameWidth = s.Texture.Width;
+                int frameWidth = s.texture.Width;
                 if (s is AnimatedSprite animated)
                     frameWidth = animated.FrameWidth;
 
-                Vector2 size = new Vector2(t.Size.X / frameWidth, t.Size.Y / s.Texture.Height);
+                Vector2 size = new Vector2(t.Size.X / frameWidth, t.Size.Y / s.texture.Height);
 
                 _spriteBatch.Draw(
-                    s.Texture,
+                    s.texture,
                     t.Position,
-                    s.SourceRectangle,
-                    s.Color,
+                    s.sourceRectangle,
+                    s.color,
                     t.Rotation,
                     default,
                     size,
-                    SpriteEffects.None,
-                    s.LayerDepth
+                    s.effects,
+                    s.layerDepth
                 );
             }
 

@@ -8,9 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83e24aef-8780-439c-aa39-652027f7f073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Camera.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/CameraComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/AnimatedSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/AnimatedSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Camera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +43,11 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/0b/2b76d9bf/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/81/f69a8c2f/SpriteEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/9c/ff8b81c1/SpriteBatch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/AnimatedSprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/CameraComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,7 +67,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.2dGameEngine.executor": "Run",
+    ".NET Project.2dGameEngine.executor": "Debug",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -110,7 +118,7 @@
       <workItem from="1760347407188" duration="17839000" />
       <workItem from="1760374771081" duration="6000" />
       <workItem from="1760374818804" duration="3825000" />
-      <workItem from="1760446047607" duration="13125000" />
+      <workItem from="1760446047607" duration="14460000" />
     </task>
     <task id="LOCAL-00001" summary="add base mecanics">
       <option name="closed" value="true" />
@@ -144,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760459985133</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Camera.cs">
+      <option name="closed" value="true" />
+      <created>1760461446873</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760461446873</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +185,8 @@
     <MESSAGE value="add all file" />
     <MESSAGE value="1.0" />
     <MESSAGE value="Animated Sprite component,&#10;Fix Collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Animated Sprite component,&#10;Fix Collision" />
+    <MESSAGE value="add Camera.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Camera.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
