@@ -8,17 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83e24aef-8780-439c-aa39-652027f7f073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/AnimatedSprite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Camera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/BoxCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/BoxCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/CollisionsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/CollisionsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/EntitySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/EntitySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +39,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/0b/2b76d9bf/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/AnimatedSprite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Camera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,7 +110,7 @@
       <workItem from="1760347407188" duration="17839000" />
       <workItem from="1760374771081" duration="6000" />
       <workItem from="1760374818804" duration="3825000" />
-      <workItem from="1760446047607" duration="11391000" />
+      <workItem from="1760446047607" duration="13125000" />
     </task>
     <task id="LOCAL-00001" summary="add base mecanics">
       <option name="closed" value="true" />
@@ -143,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760375221380</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Animated Sprite component,&#10;Fix Collision">
+      <option name="closed" value="true" />
+      <created>1760459985133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760459985133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +168,8 @@
     <MESSAGE value="add base mecanics" />
     <MESSAGE value="add all file" />
     <MESSAGE value="1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0" />
+    <MESSAGE value="Animated Sprite component,&#10;Fix Collision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Animated Sprite component,&#10;Fix Collision" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

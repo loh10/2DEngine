@@ -21,9 +21,9 @@ namespace Systems
         }
 
         // Dessine toutes les entités avec un composant Sprite + Transform
-        public static void Draw(SpriteBatch _spriteBatch, List<Entity> _entities)
+        public static void Draw(SpriteBatch _spriteBatch,Camera _camera, List<Entity> _entities)
         {
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(transformMatrix: _camera.GetViewMatrix());
 
             foreach (var entity in _entities)
             {

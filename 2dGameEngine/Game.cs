@@ -17,6 +17,7 @@ namespace GameEngine
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch = null!;
         public static ContentManager? content;
+        Camera _camera = new Camera(default);
 
         public Game()
         {
@@ -28,8 +29,8 @@ namespace GameEngine
 
         protected override void LoadContent()
         {
+            _camera = new Camera(GraphicsDevice.Viewport);
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
             var transform = new Transform(new Vector2(50, 0),0,new Vector2(64,64));
             AnimatedSprite sprite = LoadAnimatedSprite(Content,"playerAnim",2,2,128);
             sprite.LayerDepth = 1;
@@ -37,6 +38,7 @@ namespace GameEngine
 
             Entity player = new Entity(transform, sprite,new PlayerMovement(), physics,new BoxCollider(transform.Size));
             EntitySystem.Add(player);
+            _camera.Follow(player);
 
             var transform1 = new Transform(new Vector2(50, 400), 0, new Vector2(500, 10));
             Entity ground = new Entity(
@@ -67,7 +69,7 @@ namespace GameEngine
         protected override void Draw(GameTime _gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            SpritesSystem.Draw(_spriteBatch,EntitySystem.Entities);
+            SpritesSystem.Draw(_spriteBatch,_camera,EntitySystem.Entities);
             base.Draw(_gameTime);
         }
     }
