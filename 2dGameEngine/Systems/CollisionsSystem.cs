@@ -7,7 +7,7 @@ namespace Systems
 {
     public static class CollisionsSystem
     {
-        public static void CheckCollision(List<Entity> _entities)
+        public static void CheckCollision(List<Entity>? _entities)
         {
             for (int i = 0; i < _entities.Count; i++)
             {
@@ -27,23 +27,23 @@ namespace Systems
                     if (collided)
                     {
                         ResolveCollision(entityA, entityB, colliderA, colliderB);
-                        entityA.OnCollision(entityB);
-                        entityB.OnCollision(entityA);
+                        entityA.OnCollision();
+                        entityB.OnCollision();
                     }
                 }
             }
         }
 
-        private static bool BoxBoxIntersect(BoxCollider a, BoxCollider b)
+        private static bool BoxBoxIntersect(BoxCollider _a, BoxCollider _b)
         {
-            var transformA = a.entity!.GetComponent<Transform>();
-            var transformB = b.entity!.GetComponent<Transform>();
+            var transformA = _a.entity!.GetComponent<Transform>();
+            var transformB = _b.entity!.GetComponent<Transform>();
             if (transformA == null || transformB == null) return false;
 
-            Vector2 minA = transformA.Position + a.offset;
-            Vector2 maxA = minA + a.size;
-            Vector2 minB = transformB.Position + b.offset;
-            Vector2 maxB = minB + b.size;
+            Vector2 minA = transformA.Position + _a.offset;
+            Vector2 maxA = minA + _a.size;
+            Vector2 minB = transformB.Position + _b.offset;
+            Vector2 maxB = minB + _b.size;
 
             bool overlapX = maxA.X > minB.X && minA.X < maxB.X;
             bool overlapY = maxA.Y > minB.Y && minA.Y < maxB.Y;
@@ -52,17 +52,19 @@ namespace Systems
         }
 
 
-        private static void ResolveCollision(Entity a, Entity b, Collider aCol, Collider bCol)
+        private static void ResolveCollision(Entity _a, Entity _b, Collider _aCol, Collider _bCol)
         {
-            var aTrans = a.GetComponent<Transform>();
-            var aPhys = a.GetComponent<Physics>();
-            var bTrans = b.GetComponent<Transform>();
+            if (_aCol.isTrigger || _bCol.isTrigger)
+                return;
+            var aTrans = _a.GetComponent<Transform>();
+            var aPhys = _a.GetComponent<Physics>();
+            var bTrans = _b.GetComponent<Transform>();
 
             if (aTrans == null || aPhys == null || bTrans == null) return;
 
-            // Box vs Box simple
-            if (aCol is BoxCollider boxA && bCol is BoxCollider boxB)
+            if (_aCol is BoxCollider boxA && _bCol is BoxCollider boxB)
             {
+
                 Vector2 aPos = aTrans.Position + boxA.offset;
                 Vector2 bPos = bTrans.Position + boxB.offset;
 

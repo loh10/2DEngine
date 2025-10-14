@@ -9,7 +9,7 @@ namespace Systems
     {
         private static Vector2 _gravity = new Vector2(0, 100);
 
-        public static void Update(List<Entity> _entities, float _deltaTime)
+        public static void Update(List<Entity>? _entities, float _deltaTime)
         {
 
             foreach (var entity in _entities)

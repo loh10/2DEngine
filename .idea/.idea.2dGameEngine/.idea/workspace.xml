@@ -8,27 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83e24aef-8780-439c-aa39-652027f7f073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/BoxCollider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/CircleCollider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Components/Collider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/CollisionsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2dGameEngine/Systems/EntitySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2dGameEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/.idea/.idea.2dGameEngine.dir/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/2dGameEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/2dGameEngine.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/BoxCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/BoxCollider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Component.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Physics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Physics.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Entity/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/CollisionsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/CollisionsSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/PhysicsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/SpriteSystems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/TextureLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/2dGameEngine/Systems/SpritesSystems.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +32,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;loh10&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/loh10/2DEngine&quot;,
+    &quot;accountId&quot;: &quot;175b4c62-da5a-4827-8bee-9a30f9201bf4&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/43/1fbfd4e5/GraphicsDevice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/54/6bd48fdc/ContentManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/a4/ad8b55b8/SpriteBatch.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/f0/819c501f/Game.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ef8574b6c67d496a92886939b26dcd5b139400/f0/819c501f/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Sprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/2dGameEngine/Components/Transform.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,6 +111,7 @@
       <updated>1760347406119</updated>
       <workItem from="1760347407188" duration="17839000" />
       <workItem from="1760374771081" duration="6000" />
+      <workItem from="1760374818804" duration="3825000" />
     </task>
     <task id="LOCAL-00001" summary="add base mecanics">
       <option name="closed" value="true" />
@@ -124,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760365319652</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.0">
+      <option name="closed" value="true" />
+      <created>1760375221380</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760375221380</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +160,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add base mecanics" />
     <MESSAGE value="add all file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add all file" />
+    <MESSAGE value="1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

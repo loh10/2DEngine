@@ -38,11 +38,11 @@ namespace Entities
             return null;
         }
 
-        public void OnCollision(Entity _other)
+        public void OnCollision()
         {
             foreach (var component in _entityComponents)
             {
-                component.OnCollision(_other);
+                component.OnCollision();
             }
         }
     }

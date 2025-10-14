@@ -8,19 +8,19 @@ namespace Components
 
         public float Rotation { get; set; }
 
-        public Vector2 Scale { get; set; }
+        public Vector2 Size { get; set; }
 
         /// <summary>
         /// Add Transform to entity
         /// </summary>
         /// <param name="_position">Vector2 position</param>
         /// <param name="_rotation">float rotation in radians</param>
-        /// <param name="_scale"> Vector2 scale (x,y)</param>
-        public Transform(Vector2 _position = default, float _rotation = 0f, Vector2? _scale = null)
+        /// <param name="_size"> Vector2 size (x,y)</param>
+        public Transform(Vector2 _position = default, float _rotation = 0f, Vector2? _size = null)
         {
             Position = _position;
             Rotation = _rotation;
-            Scale = _scale ?? Vector2.One; // par défaut scale = (1,1)
+            Size = _size ?? Vector2.One; // par défaut scale = (1,1)
         }
     }
 }
