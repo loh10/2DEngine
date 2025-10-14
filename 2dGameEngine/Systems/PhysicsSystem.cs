@@ -5,13 +5,12 @@ using Entities;
 
 namespace Systems
 {
-    public class PhysicsSystem
+    public abstract class PhysicsSystem
     {
-        private static Vector2 _gravity = new Vector2(0, 100);
+        private static Vector2 _gravity = new Vector2(0, 500);
 
         public static void Update(List<Entity>? _entities, float _deltaTime)
         {
-
             foreach (var entity in _entities)
             {
                 var physics = entity.GetComponent<Physics>();
@@ -19,6 +18,7 @@ namespace Systems
 
                 if (physics == null || transform == null)
                     continue;
+
 
                 if (physics.IsAffectedByGravity)
                     physics.Velocity += _gravity * _deltaTime;

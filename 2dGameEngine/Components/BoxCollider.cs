@@ -1,5 +1,4 @@
-﻿using System.Data;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 namespace Components
 {
@@ -7,22 +6,20 @@ namespace Components
     {
         public Vector2 size;
 
-        public BoxCollider(Vector2 _offset = default, bool _isTrigger = false)
+        public BoxCollider(Vector2 _size = default, Vector2 _offset = default, bool _isTrigger = false)
         {
             offset = _offset;
             isTrigger = _isTrigger;
-
-            size = GetSize();
+            size = (_size != Vector2.Zero) ? _size : GetSize();
         }
+
 
         public Vector2 GetSize()
         {
-            var transform = entity?.GetComponent<Transform>();
+            Transform? transform = entity?.GetComponent<Transform>();
             if (transform != null && transform.Size != Vector2.Zero)
                 return transform.Size;
-
             return Vector2.One;
-            // throw new SyntaxErrorException("You need a Transform Component");
         }
     }
 }

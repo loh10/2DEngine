@@ -9,10 +9,15 @@ namespace Systems
 {
     public static class SpritesSystem
     {
-        // Charge un sprite depuis le ContentManager
+
         public static Sprite LoadSprite(ContentManager _content, string _spriteName)
         {
             return new Sprite(_content.Load<Texture2D>(_spriteName));
+        }
+
+        public static AnimatedSprite LoadAnimatedSprite(ContentManager _content, string _spriteName,int _nbFrames, float _timeFrame, int _frameWidth, int _frameHeight = 0)
+        {
+            return new AnimatedSprite(_content.Load<Texture2D>(_spriteName),_nbFrames,_timeFrame,_frameWidth,_frameHeight);
         }
 
         // Dessine toutes les entités avec un composant Sprite + Transform
@@ -28,8 +33,11 @@ namespace Systems
                 if (t == null || s == null)
                     continue;
 
-                Vector2 size = new Vector2(t.Size.X / s.Texture.Width, t.Size.Y / s.Texture.Height);
+                int frameWidth = s.Texture.Width;
+                if (s is AnimatedSprite animated)
+                    frameWidth = animated.FrameWidth;
 
+                Vector2 size = new Vector2(t.Size.X / frameWidth, t.Size.Y / s.Texture.Height);
 
                 _spriteBatch.Draw(
                     s.Texture,
@@ -37,12 +45,13 @@ namespace Systems
                     s.SourceRectangle,
                     s.Color,
                     t.Rotation,
-                    s.Origin,
+                    default,
                     size,
                     SpriteEffects.None,
                     s.LayerDepth
                 );
             }
+
 
             _spriteBatch.End();
         }

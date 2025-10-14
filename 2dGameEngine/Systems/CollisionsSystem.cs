@@ -21,10 +21,8 @@ namespace Systems
 
                     if (colliderA == null || colliderB == null)
                         continue;
-                    bool collided = false;
-                    collided = BoxBoxIntersect(colliderA, colliderB);
 
-                    if (collided)
+                    if (BoxIntersect(colliderA, colliderB))
                     {
                         ResolveCollision(entityA, entityB, colliderA, colliderB);
                         entityA.OnCollision();
@@ -34,10 +32,10 @@ namespace Systems
             }
         }
 
-        private static bool BoxBoxIntersect(BoxCollider _a, BoxCollider _b)
+        private static bool BoxIntersect(BoxCollider _a, BoxCollider _b)
         {
-            var transformA = _a.entity!.GetComponent<Transform>();
-            var transformB = _b.entity!.GetComponent<Transform>();
+            Transform? transformA = _a.entity!.GetComponent<Transform>();
+            Transform? transformB = _b.entity!.GetComponent<Transform>();
             if (transformA == null || transformB == null) return false;
 
             Vector2 minA = transformA.Position + _a.offset;
@@ -47,7 +45,6 @@ namespace Systems
 
             bool overlapX = maxA.X > minB.X && minA.X < maxB.X;
             bool overlapY = maxA.Y > minB.Y && minA.Y < maxB.Y;
-
             return overlapX && overlapY;
         }
 

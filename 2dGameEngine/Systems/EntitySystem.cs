@@ -13,4 +13,16 @@ public static class EntitySystem
     {
         Entities.Remove(_entity);
     }
+
+    public static void DisplayEntities()
+    {
+        foreach (var entity in Entities)
+        {
+            var transform = entity.GetComponent<Components.Transform>();
+            if (transform != null)
+            {
+                Console.WriteLine($"Entity at Position: {transform.Position}");
+            }
+        }
+    }
 }

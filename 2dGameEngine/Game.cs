@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using Components;
 using Entities;
 using Microsoft.Xna.Framework.Content;
+using Scripts;
 using Systems;
 
 using static Systems.SpritesSystem;
-using static EntitySystem;
 
 namespace GameEngine
 {
@@ -16,7 +16,7 @@ namespace GameEngine
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch = null!;
-        public static ContentManager content;
+        public static ContentManager? content;
 
         public Game()
         {
@@ -31,19 +31,19 @@ namespace GameEngine
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             var transform = new Transform(new Vector2(50, 0),0,new Vector2(64,64));
-            Sprite sprite = LoadSprite(Content,"player");
+            AnimatedSprite sprite = LoadAnimatedSprite(Content,"playerAnim",2,2,128);
             sprite.LayerDepth = 1;
             Physics physics = new Physics();
-            BoxCollider playerCollider = new BoxCollider();
 
-            Entity player = new Entity(transform, sprite, physics,new Movements(),playerCollider);
+            Entity player = new Entity(transform, sprite,new PlayerMovement(), physics,new BoxCollider(transform.Size));
             EntitySystem.Add(player);
 
             var transform1 = new Transform(new Vector2(50, 400), 0, new Vector2(500, 10));
             Entity ground = new Entity(
                 transform1,
                 new BoxCollider(transform1.Size),
-                LoadSprite(Content,"ground"));
+                LoadSprite(Content,"ground"),
+                new Physics() { IsAffectedByGravity = false });
             EntitySystem.Add(ground);
 
         }
